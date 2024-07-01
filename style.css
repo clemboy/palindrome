@@ -1,0 +1,19 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color:rgb(137, 102, 170)
+}
+
+.container {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+
+}
+
+.palindrome-box {
+    margin: 50px auto;
+    width: 100%;
+    height: 100%;
+}
