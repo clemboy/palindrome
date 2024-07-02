@@ -8,16 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Palindrome Checker</h1>
-    <div class="palindrome-box">
-        <h2 class="box title">Check Here </h2>
-        <div class="input-box">
-            <input type="text" class="text-input"
-             placeholder="Put your word here!" />
-                <button class="submit-button" type = submit>Check Me</button>
-                <div class="results"></div>
-        </div>
-    </div>
+        <h1>Palindrome Checker</h1>
+        <label for="word">Enter a word or phrase:</label><br>
+        <input type="text" id="word" placeholder="Enter text...">
+        <button onclick="checkPalindrome()">Check</button>
+        <p id="result"></p>
     </div>
     <script src="script.js"></script>
 </body>

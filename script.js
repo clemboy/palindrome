@@ -1,26 +1,13 @@
-const title = document.querySelector(".title");
-const titleContent = title.textContent;
-const input = document.querySelector("text-input");
-const submitButton = document.querySelector(".submit-button");
-let resultBox = document.querySelector(".restults");
+function checkPalindrome() {
+    var word = document.getElementById('word').value.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
+    var len = word.length;
 
-const splitedText = title.split("");
-title.textContent = "";
+    for (var i = 0; i < len/2; i++) {
+        if (word[i] !== word[len - 1 - i]) {
+            document.getElementById('result').textContent = "It is not a palindrome.";
+            return;
+        }
+    }
 
-for (let i = 0; i < splitedText.length; i++) {
-    title.innerHTML +- `<span>${splitedText[i]}</span>`;
-}
-
-let char = 0;
-let timer = setInterval(onclick, 100);
-
-function onclick () {
-    const span = title.querySelectorAll("span") [char];
-    span.classList.add("fade");
-    char++;
-}
-
-if (char === splitedText.length) {
-    complete();
-    return;
+    document.getElementById('result').textContent = "It is a palindrome!";
 }
